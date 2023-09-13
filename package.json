@@ -7,6 +7,7 @@
     "dev": "tsx watch src/server.ts"
   },
   "devDependencies": {
+    "@types/node": "^20.6.0",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.7.0",
     "eslint": "^8.49.0",
@@ -16,6 +17,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@fastify/multipart": "^7.7.3",
     "@prisma/client": "^5.2.0",
     "fastify": "^4.23.0"
   }

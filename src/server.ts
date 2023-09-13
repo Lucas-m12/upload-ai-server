@@ -1,11 +1,14 @@
 import { fastify } from 'fastify';
+import { promptsRoute } from 'infra/http/routes/prompts';
+import { videoRoute } from 'infra/http/routes/video';
+
 
 const PORT = 3333;
 
 const app = fastify();
-app.get('/', () => {
-	return 'Hello World';
-});
+app.register(promptsRoute, { prefix: '/api/prompts' });
+app.register(videoRoute, { prefix: '/api/videos' });
+
 app.listen({
 	port: PORT,
 }).then(() => {
